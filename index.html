@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    * {
+  box-sizing: border-box;
+}
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<h2>Logseq Marketplace Statistic - 2022-03-06</h2>
+<input id='myInput' onkeyup='searchTable()' type='text' placeholder="Search for names..">
+
+<table id="myTable" border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Name</th>
+      <th>Description</th>
+      <th>Theme</th>
+      <th>Plugin</th>
+      <th>Repo - link</th>
+      <th>Repo Name</th>
+      <th>Author</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pengx17/logseq-plugin-heatmap</td>
+      <td>Activity heatmap based on how many journal blocks created that day</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/pengx17/logseq-plugin-heatmap" target="_blank">https://github.com/pengx17/logseq-plugin-heatmap</a></td>
+      <td>logseq-plugin-heatmap</td>
+      <td>pengx17</td>
+    </tr>
+    <tr>
+      <td>benjaffe/logseq-music-notation</td>
+      <td>Write music in Logseq using ABC Notation</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/benjaffe/logseq-music-notation" target="_blank">https://github.com/benjaffe/logseq-music-notation</a></td>
+      <td>logseq-music-notation</td>
+      <td>benjaffe</td>
+    </tr>
+    <tr>
+      <td>rcvd/logseq-things-theme</td>
+      <td>The things you used to own, now they own you.</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/rcvd/logseq-things-theme" target="_blank">https://github.com/rcvd/logseq-things-theme</a></td>
+      <td>logseq-things-theme</td>
+      <td>rcvd</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-readwise-plugin</td>
+      <td>Unofficial Readwise plugin to pull in all your highlights from Readwise and track new ones!</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-readwise-plugin" target="_blank">https://github.com/hkgnp/logseq-readwise-plugin</a></td>
+      <td>logseq-readwise-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-calview-plugin</td>
+      <td>This plugin offers a calendar from within Logseq that captures your blocks with event parameters in a calendar view.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-calview-plugin" target="_blank">https://github.com/hkgnp/logseq-calview-plugin</a></td>
+      <td>logseq-calview-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>wirtzdan/logseq-paper-theme</td>
+      <td>A minimal Logseq theme</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/wirtzdan/logseq-paper-theme" target="_blank">https://github.com/wirtzdan/logseq-paper-theme</a></td>
+      <td>logseq-paper-theme</td>
+      <td>wirtzdan</td>
+    </tr>
+    <tr>
+      <td>haydenull/logseq-plugin-agenda</td>
+      <td>An agenda manager plugin for logseq</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/haydenull/logseq-plugin-agenda" target="_blank">https://github.com/haydenull/logseq-plugin-agenda</a></td>
+      <td>logseq-plugin-agenda</td>
+      <td>haydenull</td>
+    </tr>
+    <tr>
+      <td>debanjandhar12/logseq-anki-sync</td>
+      <td>An Logseq to Anki Flashcards integration plugin.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/debanjandhar12/logseq-anki-sync" target="_blank">https://github.com/debanjandhar12/logseq-anki-sync</a></td>
+      <td>logseq-anki-sync</td>
+      <td>debanjandhar12</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-tablerender-plugin</td>
+      <td>Render tables with basic math functions using data from your blocks</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-tablerender-plugin" target="_blank">https://github.com/hkgnp/logseq-tablerender-plugin</a></td>
+      <td>logseq-tablerender-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-tweet-plugin</td>
+      <td>Easily tweet from within Logseq in a quick and easy manner!</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-tweet-plugin" target="_blank">https://github.com/hkgnp/logseq-tweet-plugin</a></td>
+      <td>logseq-tweet-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>vipzhicheng/logseq-plugin-task-management-shortcuts</td>
+      <td>Add shortcuts for Logseq task management.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/vipzhicheng/logseq-plugin-task-management-shortcuts" target="_blank">https://github.com/vipzhicheng/logseq-plugin-task-management-shortcuts</a></td>
+      <td>logseq-plugin-task-management-shortcuts</td>
+      <td>vipzhicheng</td>
+    </tr>
+    <tr>
+      <td>sawhney17/logseq-calendars-plugin</td>
+      <td>Sync your logseq daily note with your google, icloud or outlook calendar</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/sawhney17/logseq-calendars-plugin" target="_blank">https://github.com/sawhney17/logseq-calendars-plugin</a></td>
+      <td>logseq-calendars-plugin</td>
+      <td>sawhney17</td>
+    </tr>
+    <tr>
+      <td>benjaffe/logseq-reference-styles</td>
+      <td>Add emoji or custom colors to block references that match particular patterns</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/benjaffe/logseq-reference-styles" target="_blank">https://github.com/benjaffe/logseq-reference-styles</a></td>
+      <td>logseq-reference-styles</td>
+      <td>benjaffe</td>
+    </tr>
+    <tr>
+      <td>pengx17/logseq-plugin-todo-master</td>
+      <td>Render a progress bar to gether the overall progress of the current block or page.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/pengx17/logseq-plugin-todo-master" target="_blank">https://github.com/pengx17/logseq-plugin-todo-master</a></td>
+      <td>logseq-plugin-todo-master</td>
+      <td>pengx17</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-parsecsv-plugin</td>
+      <td>Easily upload a CSV file and convert it into a table in Logseq!</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-parsecsv-plugin" target="_blank">https://github.com/hkgnp/logseq-parsecsv-plugin</a></td>
+      <td>logseq-parsecsv-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>rcvd/logseq-craft-theme</td>
+      <td>Almost all creativity requires purposeful play. A craft theme for Logseq</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/rcvd/logseq-craft-theme" target="_blank">https://github.com/rcvd/logseq-craft-theme</a></td>
+      <td>logseq-craft-theme</td>
+      <td>rcvd</td>
+    </tr>
+    <tr>
+      <td>haydenull/logseq-plugin-browser</td>
+      <td>A browser plugin for logseq</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/haydenull/logseq-plugin-browser" target="_blank">https://github.com/haydenull/logseq-plugin-browser</a></td>
+      <td>logseq-plugin-browser</td>
+      <td>haydenull</td>
+    </tr>
+    <tr>
+      <td>sethyuan/logseq-plugin-wrap</td>
+      <td>Create your own wrappings with optional key bindings for selected text, a set of useful defaults is also provided.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/sethyuan/logseq-plugin-wrap" target="_blank">https://github.com/sethyuan/logseq-plugin-wrap</a></td>
+      <td>logseq-plugin-wrap</td>
+      <td>sethyuan</td>
+    </tr>
+    <tr>
+      <td>c6p/logseq-hypothesis</td>
+      <td>Sync hypothes.is annotations to Logseq.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/c6p/logseq-hypothesis" target="_blank">https://github.com/c6p/logseq-hypothesis</a></td>
+      <td>logseq-hypothesis</td>
+      <td>c6p</td>
+    </tr>
+    <tr>
+      <td>haydenull/logseq-plugin-milestone</td>
+      <td>Show milestone in calendar</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/haydenull/logseq-plugin-milestone" target="_blank">https://github.com/haydenull/logseq-plugin-milestone</a></td>
+      <td>logseq-plugin-milestone</td>
+      <td>haydenull</td>
+    </tr>
+    <tr>
+      <td>sawhney17/logseq-smartblocks</td>
+      <td>A port of the roam SmartBlocks extension with a dash of Notion</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/sawhney17/logseq-smartblocks" target="_blank">https://github.com/sawhney17/logseq-smartblocks</a></td>
+      <td>logseq-smartblocks</td>
+      <td>sawhney17</td>
+    </tr>
+    <tr>
+      <td>joeykhuang/logseq-textbook-theme</td>
+      <td>Textbook theme for Logseq</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/joeykhuang/logseq-textbook-theme" target="_blank">https://github.com/joeykhuang/logseq-textbook-theme</a></td>
+      <td>logseq-textbook-theme</td>
+      <td>joeykhuang</td>
+    </tr>
+    <tr>
+      <td>gidongkwon/logseq-plugin-tags</td>
+      <td>A plugin that lets you find and search all of your #tags.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/gidongkwon/logseq-plugin-tags" target="_blank">https://github.com/gidongkwon/logseq-plugin-tags</a></td>
+      <td>logseq-plugin-tags</td>
+      <td>gidongkwon</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-kanban-plugin</td>
+      <td>Simple plugin to help visualise data on a Kanban Board!</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-kanban-plugin" target="_blank">https://github.com/hkgnp/logseq-kanban-plugin</a></td>
+      <td>logseq-kanban-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>sethfair/logseq-focus-mode</td>
+      <td>Focus mode for Logseq.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/sethfair/logseq-focus-mode" target="_blank">https://github.com/sethfair/logseq-focus-mode</a></td>
+      <td>logseq-focus-mode</td>
+      <td>sethfair</td>
+    </tr>
+    <tr>
+      <td>vipzhicheng/logseq-plugin-copy-ref-to-journal</td>
+      <td>Copy any page blocks ref to today's journal page, very useful for task management case.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/vipzhicheng/logseq-plugin-copy-ref-to-journal" target="_blank">https://github.com/vipzhicheng/logseq-plugin-copy-ref-to-journal</a></td>
+      <td>logseq-plugin-copy-ref-to-journal</td>
+      <td>vipzhicheng</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-keywordfrequency-plugin</td>
+      <td>Keeps track of your most used keywords, just for fun!</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-keywordfrequency-plugin" target="_blank">https://github.com/hkgnp/logseq-keywordfrequency-plugin</a></td>
+      <td>logseq-keywordfrequency-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>nmartin84/logseq-chocolate</td>
+      <td>A rich, yummy, delicious theme for Logseq.</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/nmartin84/logseq-chocolate" target="_blank">https://github.com/nmartin84/logseq-chocolate</a></td>
+      <td>logseq-chocolate</td>
+      <td>nmartin84</td>
+    </tr>
+    <tr>
+      <td>nmartin84/logseq-nord</td>
+      <td>A theme for Nord.</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/nmartin84/logseq-nord" target="_blank">https://github.com/nmartin84/logseq-nord</a></td>
+      <td>logseq-nord</td>
+      <td>nmartin84</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-recurrence-plugin</td>
+      <td>This plugin allows you to quickly add recurring blocks based on your desired recurrence. It also allows you to delete inserted recurring blocks as well!</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-recurrence-plugin" target="_blank">https://github.com/hkgnp/logseq-recurrence-plugin</a></td>
+      <td>logseq-recurrence-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>pengx17/logseq-plugin-link-preview</td>
+      <td>Show basic link information for external links in Logseq.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/pengx17/logseq-plugin-link-preview" target="_blank">https://github.com/pengx17/logseq-plugin-link-preview</a></td>
+      <td>logseq-plugin-link-preview</td>
+      <td>pengx17</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-datenlp-plugin</td>
+      <td>This super simple plugin uses NLP to parse your content for dates and times so that they can be easily tracked through your yournal pages!</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-datenlp-plugin" target="_blank">https://github.com/hkgnp/logseq-datenlp-plugin</a></td>
+      <td>logseq-datenlp-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>xyhp915/logseq-journals-calendar</td>
+      <td>A simple journals calendar plugin for Logseq.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/xyhp915/logseq-journals-calendar" target="_blank">https://github.com/xyhp915/logseq-journals-calendar</a></td>
+      <td>logseq-journals-calendar</td>
+      <td>xyhp915</td>
+    </tr>
+    <tr>
+      <td>blueteafrog/logseq-oxfordblue-theme</td>
+      <td>Oxford blue theme features both a low contrast dark mode and high contrast light mode</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/blueteafrog/logseq-oxfordblue-theme" target="_blank">https://github.com/blueteafrog/logseq-oxfordblue-theme</a></td>
+      <td>logseq-oxfordblue-theme</td>
+      <td>blueteafrog</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-osmmaps-plugin</td>
+      <td>This plugin lets you create a map and plot a marker on a specific spot.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-osmmaps-plugin" target="_blank">https://github.com/hkgnp/logseq-osmmaps-plugin</a></td>
+      <td>logseq-osmmaps-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>tankcool/logseq-toolbox</td>
+      <td>Some useful tiny tools for logseq.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/tankcool/logseq-toolbox" target="_blank">https://github.com/tankcool/logseq-toolbox</a></td>
+      <td>logseq-toolbox</td>
+      <td>tankcool</td>
+    </tr>
+    <tr>
+      <td>tankcool/logseq-random-note</td>
+      <td>Random walk through your Logseq notes.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/tankcool/logseq-random-note" target="_blank">https://github.com/tankcool/logseq-random-note</a></td>
+      <td>logseq-random-note</td>
+      <td>tankcool</td>
+    </tr>
+    <tr>
+      <td>pengx17/logseq-dev-theme</td>
+      <td>A theme inspired by Dev.to &amp; Figma.</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/pengx17/logseq-dev-theme" target="_blank">https://github.com/pengx17/logseq-dev-theme</a></td>
+      <td>logseq-dev-theme</td>
+      <td>pengx17</td>
+    </tr>
+    <tr>
+      <td>tobealive/logseq-allday-theme</td>
+      <td>A clean theme styled for high readability and minimal eye strain.</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/tobealive/logseq-allday-theme" target="_blank">https://github.com/tobealive/logseq-allday-theme</a></td>
+      <td>logseq-allday-theme</td>
+      <td>tobealive</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-mermaid-plugin</td>
+      <td>This simple plugin allows you to quickly insert mermaid diagrams in your notes.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-mermaid-plugin" target="_blank">https://github.com/hkgnp/logseq-mermaid-plugin</a></td>
+      <td>logseq-mermaid-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>haydenull/logseq-woz-theme</td>
+      <td>A theme base logseq-dev-theme.</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/haydenull/logseq-woz-theme" target="_blank">https://github.com/haydenull/logseq-woz-theme</a></td>
+      <td>logseq-woz-theme</td>
+      <td>haydenull</td>
+    </tr>
+    <tr>
+      <td>vipzhicheng/logseq-plugin-comment-block</td>
+      <td>An automatic block comment history.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/vipzhicheng/logseq-plugin-comment-block" target="_blank">https://github.com/vipzhicheng/logseq-plugin-comment-block</a></td>
+      <td>logseq-plugin-comment-block</td>
+      <td>vipzhicheng</td>
+    </tr>
+    <tr>
+      <td>hyrijk/logseq-plugin-split-block</td>
+      <td>Splitting multi-line text into blocks</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hyrijk/logseq-plugin-split-block" target="_blank">https://github.com/hyrijk/logseq-plugin-split-block</a></td>
+      <td>logseq-plugin-split-block</td>
+      <td>hyrijk</td>
+    </tr>
+    <tr>
+      <td>dale502/logseq-discord-like-dark-theme</td>
+      <td>Discord Like Dark Theme</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/dale502/logseq-discord-like-dark-theme" target="_blank">https://github.com/dale502/logseq-discord-like-dark-theme</a></td>
+      <td>logseq-discord-like-dark-theme</td>
+      <td>dale502</td>
+    </tr>
+    <tr>
+      <td>sethyuan/logseq-plugin-charspacing</td>
+      <td>Add space between Chinese and ASCII characters to make document look nicer.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/sethyuan/logseq-plugin-charspacing" target="_blank">https://github.com/sethyuan/logseq-plugin-charspacing</a></td>
+      <td>logseq-plugin-charspacing</td>
+      <td>sethyuan</td>
+    </tr>
+    <tr>
+      <td>vipzhicheng/logseq-plugin-vim-shortcuts</td>
+      <td>VIM-like operation feeling.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/vipzhicheng/logseq-plugin-vim-shortcuts" target="_blank">https://github.com/vipzhicheng/logseq-plugin-vim-shortcuts</a></td>
+      <td>logseq-plugin-vim-shortcuts</td>
+      <td>vipzhicheng</td>
+    </tr>
+    <tr>
+      <td>blueteafrog/logseq-gunmetal-theme</td>
+      <td>Gunmetal Theme was designed for long screen times and reading comfort. It features a dark theme and a light theme.</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/blueteafrog/logseq-gunmetal-theme" target="_blank">https://github.com/blueteafrog/logseq-gunmetal-theme</a></td>
+      <td>logseq-gunmetal-theme</td>
+      <td>blueteafrog</td>
+    </tr>
+    <tr>
+      <td>hyrijk/logseq-plugin-block-to-page</td>
+      <td>Turn block into page</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hyrijk/logseq-plugin-block-to-page" target="_blank">https://github.com/hyrijk/logseq-plugin-block-to-page</a></td>
+      <td>logseq-plugin-block-to-page</td>
+      <td>hyrijk</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-quicktodo-plugin</td>
+      <td>This simple plugin helps you to insert a TODO item on your today's journal page, without navigating to it.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-quicktodo-plugin" target="_blank">https://github.com/hkgnp/logseq-quicktodo-plugin</a></td>
+      <td>logseq-quicktodo-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>JJAYCHEN1e/logseq-plugin-image-uploader</td>
+      <td>Upload images with PicGo.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/JJAYCHEN1e/logseq-plugin-image-uploader" target="_blank">https://github.com/JJAYCHEN1e/logseq-plugin-image-uploader</a></td>
+      <td>logseq-plugin-image-uploader</td>
+      <td>JJAYCHEN1e</td>
+    </tr>
+    <tr>
+      <td>avoonix/logseq-pink-as-fox-theme</td>
+      <td>Black and pink theme for Logseq.</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/avoonix/logseq-pink-as-fox-theme" target="_blank">https://github.com/avoonix/logseq-pink-as-fox-theme</a></td>
+      <td>logseq-pink-as-fox-theme</td>
+      <td>avoonix</td>
+    </tr>
+    <tr>
+      <td>mlanza/logseq-wide-eyed</td>
+      <td>Toggles the visibility of completed/canceled to-dos.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/mlanza/logseq-wide-eyed" target="_blank">https://github.com/mlanza/logseq-wide-eyed</a></td>
+      <td>logseq-wide-eyed</td>
+      <td>mlanza</td>
+    </tr>
+    <tr>
+      <td>theBenForce/logseq-plugin-my-highlights</td>
+      <td>Import highlights into logseq</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/theBenForce/logseq-plugin-my-highlights" target="_blank">https://github.com/theBenForce/logseq-plugin-my-highlights</a></td>
+      <td>logseq-plugin-my-highlights</td>
+      <td>theBenForce</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-swapblocks-plugin</td>
+      <td>Simple plugin to swap a reference block with its original block and preserve it's other references.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-swapblocks-plugin" target="_blank">https://github.com/hkgnp/logseq-swapblocks-plugin</a></td>
+      <td>logseq-swapblocks-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>sethyuan/logseq-plugin-doc</td>
+      <td>Show page in a more document like look and provide quick exporting.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/sethyuan/logseq-plugin-doc" target="_blank">https://github.com/sethyuan/logseq-plugin-doc</a></td>
+      <td>logseq-plugin-doc</td>
+      <td>sethyuan</td>
+    </tr>
+    <tr>
+      <td>santiyounger/Cobra</td>
+      <td>If Cobra Kai had a Logseq theme this would be it! (Made for fans of dark-mode).</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/santiyounger/Cobra" target="_blank">https://github.com/santiyounger/Cobra</a></td>
+      <td>Cobra</td>
+      <td>santiyounger</td>
+    </tr>
+    <tr>
+      <td>pengx17/logseq-plugin-bullet-threading</td>
+      <td>Add bullet threading to your active blocks in Logseq.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/pengx17/logseq-plugin-bullet-threading" target="_blank">https://github.com/pengx17/logseq-plugin-bullet-threading</a></td>
+      <td>logseq-plugin-bullet-threading</td>
+      <td>pengx17</td>
+    </tr>
+    <tr>
+      <td>nmartin84/logseq-solarized</td>
+      <td>A solarized light theme.</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/nmartin84/logseq-solarized" target="_blank">https://github.com/nmartin84/logseq-solarized</a></td>
+      <td>logseq-solarized</td>
+      <td>nmartin84</td>
+    </tr>
+    <tr>
+      <td>sidharth-panwar/logseq-extract-plugin</td>
+      <td>The logseq-extract-plugin is used to extract bold and highlighted text from a block and all its nested blocks.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/sidharth-panwar/logseq-extract-plugin" target="_blank">https://github.com/sidharth-panwar/logseq-extract-plugin</a></td>
+      <td>logseq-extract-plugin</td>
+      <td>sidharth-panwar</td>
+    </tr>
+    <tr>
+      <td>LeonWong0609/D42ker-Logseq</td>
+      <td>A darker Logseq theme.</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/LeonWong0609/D42ker-Logseq" target="_blank">https://github.com/LeonWong0609/D42ker-Logseq</a></td>
+      <td>D42ker-Logseq</td>
+      <td>LeonWong0609</td>
+    </tr>
+    <tr>
+      <td>sawhney17/logseq-case-converter</td>
+      <td>A utility to quickly change the casing of a block</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/sawhney17/logseq-case-converter" target="_blank">https://github.com/sawhney17/logseq-case-converter</a></td>
+      <td>logseq-case-converter</td>
+      <td>sawhney17</td>
+    </tr>
+    <tr>
+      <td>mlanza/logseq-style-carousel</td>
+      <td>Toggle visibility of completed and canceled to-dos.  Buttons may be added/reconfigured for any imaginable style effects.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/mlanza/logseq-style-carousel" target="_blank">https://github.com/mlanza/logseq-style-carousel</a></td>
+      <td>logseq-style-carousel</td>
+      <td>mlanza</td>
+    </tr>
+    <tr>
+      <td>sokirill/logseq-panic-theme</td>
+      <td>A theme inspired by Panic mode tempalte from Bear notes app</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/sokirill/logseq-panic-theme" target="_blank">https://github.com/sokirill/logseq-panic-theme</a></td>
+      <td>logseq-panic-theme</td>
+      <td>sokirill</td>
+    </tr>
+    <tr>
+      <td>sansui233/logseq-bonofix-theme</td>
+      <td>A clean theme focus on bujo and long time focusing experience</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/sansui233/logseq-bonofix-theme" target="_blank">https://github.com/sansui233/logseq-bonofix-theme</a></td>
+      <td>logseq-bonofix-theme</td>
+      <td>sansui233</td>
+    </tr>
+    <tr>
+      <td>clearlysid/logseq-unsplash</td>
+      <td>A plugin to add Unsplash images via slash commands in Logseq</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/clearlysid/logseq-unsplash" target="_blank">https://github.com/clearlysid/logseq-unsplash</a></td>
+      <td>logseq-unsplash</td>
+      <td>clearlysid</td>
+    </tr>
+    <tr>
+      <td>vipzhicheng/logseq-plugin-lock</td>
+      <td>Lock block with your password, and only can unlock with your password.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/vipzhicheng/logseq-plugin-lock" target="_blank">https://github.com/vipzhicheng/logseq-plugin-lock</a></td>
+      <td>logseq-plugin-lock</td>
+      <td>vipzhicheng</td>
+    </tr>
+    <tr>
+      <td>nmartin84/logseq-tokyo-theme</td>
+      <td>Port of the Obsidian MD theme Tokyo Night.</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/nmartin84/logseq-tokyo-theme" target="_blank">https://github.com/nmartin84/logseq-tokyo-theme</a></td>
+      <td>logseq-tokyo-theme</td>
+      <td>nmartin84</td>
+    </tr>
+    <tr>
+      <td>sethyuan/logseq-plugin-tocgen</td>
+      <td>Generate a TOC of any page anywhere to quickly access the page's content.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/sethyuan/logseq-plugin-tocgen" target="_blank">https://github.com/sethyuan/logseq-plugin-tocgen</a></td>
+      <td>logseq-plugin-tocgen</td>
+      <td>sethyuan</td>
+    </tr>
+    <tr>
+      <td>rcvd/logseq-quattro-theme</td>
+      <td>Where your attention goes, your time goes. An iA Writer inspired theme for Logseq.</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/rcvd/logseq-quattro-theme" target="_blank">https://github.com/rcvd/logseq-quattro-theme</a></td>
+      <td>logseq-quattro-theme</td>
+      <td>rcvd</td>
+    </tr>
+    <tr>
+      <td>sethfair/logseq-atlas-theme</td>
+      <td>Atlas theme provides a pure and distraction-free experience with always a dark sidebar.</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/sethfair/logseq-atlas-theme" target="_blank">https://github.com/sethfair/logseq-atlas-theme</a></td>
+      <td>logseq-atlas-theme</td>
+      <td>sethfair</td>
+    </tr>
+    <tr>
+      <td>dracula/logseq</td>
+      <td>🧛 Dark theme for Logseq.</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/dracula/logseq" target="_blank">https://github.com/dracula/logseq</a></td>
+      <td>logseq</td>
+      <td>dracula</td>
+    </tr>
+    <tr>
+      <td>vipzhicheng/logseq-plugin-mark-map</td>
+      <td>Mind map support based on markmap library.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/vipzhicheng/logseq-plugin-mark-map" target="_blank">https://github.com/vipzhicheng/logseq-plugin-mark-map</a></td>
+      <td>logseq-plugin-mark-map</td>
+      <td>vipzhicheng</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-mergepages-plugin</td>
+      <td>Simple plugin to help merge pages.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-mergepages-plugin" target="_blank">https://github.com/hkgnp/logseq-mergepages-plugin</a></td>
+      <td>logseq-mergepages-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>c6p/logseq-habit-tracker</td>
+      <td>Track habits on daily journal pages.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/c6p/logseq-habit-tracker" target="_blank">https://github.com/c6p/logseq-habit-tracker</a></td>
+      <td>logseq-habit-tracker</td>
+      <td>c6p</td>
+    </tr>
+    <tr>
+      <td>DiamondYuan/logseq-eink-theme</td>
+      <td>A pure E-ink theme for black-and-white monitors.</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/DiamondYuan/logseq-eink-theme" target="_blank">https://github.com/DiamondYuan/logseq-eink-theme</a></td>
+      <td>logseq-eink-theme</td>
+      <td>DiamondYuan</td>
+    </tr>
+    <tr>
+      <td>npgrosser/logseq-diagrams-as-code</td>
+      <td>Create diagrams from textual representation (aka 'Diagrams as Code') within Logseq</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/npgrosser/logseq-diagrams-as-code" target="_blank">https://github.com/npgrosser/logseq-diagrams-as-code</a></td>
+      <td>logseq-diagrams-as-code</td>
+      <td>npgrosser</td>
+    </tr>
+    <tr>
+      <td>crendl/logseq-sepia-theme</td>
+      <td>A Sepia Logseq Theme</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/crendl/logseq-sepia-theme" target="_blank">https://github.com/crendl/logseq-sepia-theme</a></td>
+      <td>logseq-sepia-theme</td>
+      <td>crendl</td>
+    </tr>
+    <tr>
+      <td>sawhney17/logseq-datetag-plugin</td>
+      <td>A utility to append the creation date of a block as a tag. Requires block timestamps to be enabled in settings</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/sawhney17/logseq-datetag-plugin" target="_blank">https://github.com/sawhney17/logseq-datetag-plugin</a></td>
+      <td>logseq-datetag-plugin</td>
+      <td>sawhney17</td>
+    </tr>
+    <tr>
+      <td>sethyuan/logseq-plugin-media-ts</td>
+      <td>This plugin can generate timestamps for video, audio and Bilibili video, it takes you to the corresponding video/audio position when clicked.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/sethyuan/logseq-plugin-media-ts" target="_blank">https://github.com/sethyuan/logseq-plugin-media-ts</a></td>
+      <td>logseq-plugin-media-ts</td>
+      <td>sethyuan</td>
+    </tr>
+    <tr>
+      <td>blueteafrog/logseq-mocha-theme</td>
+      <td>Mocha theme features a light and dark mode with pronounced main content section</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/blueteafrog/logseq-mocha-theme" target="_blank">https://github.com/blueteafrog/logseq-mocha-theme</a></td>
+      <td>logseq-mocha-theme</td>
+      <td>blueteafrog</td>
+    </tr>
+    <tr>
+      <td>hserranome/logseq-imgur-upload</td>
+      <td>Upload to Imgur and insert URL</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hserranome/logseq-imgur-upload" target="_blank">https://github.com/hserranome/logseq-imgur-upload</a></td>
+      <td>logseq-imgur-upload</td>
+      <td>hserranome</td>
+    </tr>
+    <tr>
+      <td>shady2k/logseq-inbox-telegram-plugin</td>
+      <td>A Logseq plugin that reads Telegram chat and pull messages to daily journal.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/shady2k/logseq-inbox-telegram-plugin" target="_blank">https://github.com/shady2k/logseq-inbox-telegram-plugin</a></td>
+      <td>logseq-inbox-telegram-plugin</td>
+      <td>shady2k</td>
+    </tr>
+    <tr>
+      <td>pengx17/logseq-plugin-tabs</td>
+      <td>Open pages or blocks in tabs like working in the browser</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/pengx17/logseq-plugin-tabs" target="_blank">https://github.com/pengx17/logseq-plugin-tabs</a></td>
+      <td>logseq-plugin-tabs</td>
+      <td>pengx17</td>
+    </tr>
+    <tr>
+      <td>vipzhicheng/logseq-plugin-heading-level-shortcuts</td>
+      <td>Bind shortcuts for heading level</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/vipzhicheng/logseq-plugin-heading-level-shortcuts" target="_blank">https://github.com/vipzhicheng/logseq-plugin-heading-level-shortcuts</a></td>
+      <td>logseq-plugin-heading-level-shortcuts</td>
+      <td>vipzhicheng</td>
+    </tr>
+    <tr>
+      <td>sawhney17/logseq-property-visualizer</td>
+      <td>Visualizing trends in page properties, requires Chart Render and Table render plugin</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/sawhney17/logseq-property-visualizer" target="_blank">https://github.com/sawhney17/logseq-property-visualizer</a></td>
+      <td>logseq-property-visualizer</td>
+      <td>sawhney17</td>
+    </tr>
+    <tr>
+      <td>haydenull/logseq-plugin-markdown-table</td>
+      <td>Markdown Table Editor</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/haydenull/logseq-plugin-markdown-table" target="_blank">https://github.com/haydenull/logseq-plugin-markdown-table</a></td>
+      <td>logseq-plugin-markdown-table</td>
+      <td>haydenull</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-toc-plugin</td>
+      <td>Interactive (style-able), real-time rendering of Table of Contents.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-toc-plugin" target="_blank">https://github.com/hkgnp/logseq-toc-plugin</a></td>
+      <td>logseq-toc-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-chartrender-plugin</td>
+      <td>Create pie, line, bar and area charts using block data. Allows changing of chart type and colours on the fly!</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-chartrender-plugin" target="_blank">https://github.com/hkgnp/logseq-chartrender-plugin</a></td>
+      <td>logseq-chartrender-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-todoist-plugin</td>
+      <td>Easily pull active tasks from Todoist and quickly push tasks to Todoist!</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-todoist-plugin" target="_blank">https://github.com/hkgnp/logseq-todoist-plugin</a></td>
+      <td>logseq-todoist-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>vipzhicheng/logseq-plugin-lock-screen</td>
+      <td>Add lock screen to Logseq for safer and fun.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/vipzhicheng/logseq-plugin-lock-screen" target="_blank">https://github.com/vipzhicheng/logseq-plugin-lock-screen</a></td>
+      <td>logseq-plugin-lock-screen</td>
+      <td>vipzhicheng</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-wordcount-plugin</td>
+      <td>Simple word counter that calculates the number of words across all nested blocks!</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-wordcount-plugin" target="_blank">https://github.com/hkgnp/logseq-wordcount-plugin</a></td>
+      <td>logseq-wordcount-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>pengx17/logseq-laurel-theme</td>
+      <td>A custom theme forked from logseq-clean-themes</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/pengx17/logseq-laurel-theme" target="_blank">https://github.com/pengx17/logseq-laurel-theme</a></td>
+      <td>logseq-laurel-theme</td>
+      <td>pengx17</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-trackhabits2-plugin</td>
+      <td>Easily track your habits by just tagging your TODO list with #habit-tracker !</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-trackhabits2-plugin" target="_blank">https://github.com/hkgnp/logseq-trackhabits2-plugin</a></td>
+      <td>logseq-trackhabits2-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>rcvd/logseq-bear-theme</td>
+      <td>You're braver than you believe, stronger than you seem and smarter than you think. A bear theme for Logseq</td>
+      <td>True</td>
+      <td>False</td>
+      <td><a href="https://github.com/rcvd/logseq-bear-theme" target="_blank">https://github.com/rcvd/logseq-bear-theme</a></td>
+      <td>logseq-bear-theme</td>
+      <td>rcvd</td>
+    </tr>
+    <tr>
+      <td>hkgnp/logseq-localassets-plugin</td>
+      <td>Simple plugin to easily insert local assets (e.g. images, PDFs, audio and video files) without the need to specify the path.</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/hkgnp/logseq-localassets-plugin" target="_blank">https://github.com/hkgnp/logseq-localassets-plugin</a></td>
+      <td>logseq-localassets-plugin</td>
+      <td>hkgnp</td>
+    </tr>
+    <tr>
+      <td>phonetonote/phonetonote-logseq</td>
+      <td>fetch messages from your phonetonote feed into your logseq graph</td>
+      <td>False</td>
+      <td>True</td>
+      <td><a href="https://github.com/phonetonote/phonetonote-logseq" target="_blank">https://github.com/phonetonote/phonetonote-logseq</a></td>
+      <td>phonetonote-logseq</td>
+      <td>phonetonote</td>
+    </tr>
+  </tbody>
+</table>
+<script>
+function searchTable() {
+    var input, filter, found, table, tr, td, i, j;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+            if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                found = true;
+            }
+        }
+        if (found) {
+            tr[i].style.display = "";
+            found = false;
+        } else {
+            tr[i].style.display = "none";
+        }
+    }
+}
+</script>
+</body>
+</html>
